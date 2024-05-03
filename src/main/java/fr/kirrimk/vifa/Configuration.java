@@ -68,7 +68,7 @@ public class Configuration {
      * 
      */
     private Configuration(){
-        File confFile = new File ("vifa22.conf");
+        File confFile = new File ("resources/vifa.conf");
         try {
             BufferedReader lecteur = new BufferedReader(new FileReader(confFile));
             String ligne;
@@ -248,11 +248,11 @@ public class Configuration {
                 }
             } 
             catch (IOException e) {
-                System.out.println(e+"\nFICHIER DE MERDE");
+                System.out.println(e+"\nFICHIER INCORRECT");
             }
         }
         catch(FileNotFoundException e) {
-            System.out.println(e+"\nFICHIER DE CONFIGURATION PERDU");
+            System.out.println(e+"\nFICHIER DE CONFIGURATION INTROUVABLE");
         }
         
     }

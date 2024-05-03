@@ -1,0 +1,8 @@
+#!/bin/sh
+SELF=$(readlink -f "$0")
+HERE=${SELF%/*}
+export PATH="${HERE}"
+${HERE}/ivyCommunications_linux/ivyCommunications &
+IVYPID=$!
+${HERE}/jdk-17_linux/bin/java -jar ${HERE}/VIFA.jar
+kill -9 $IVYPID

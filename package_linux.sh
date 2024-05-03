@@ -9,7 +9,7 @@ if [ $2 == "mvn" ]; then
 mvn package
 fi
 
-mkdir ./target/packages
+mkdir -p ./target/packages/resources
 
 if ! [[ -f ./target/packages/openjdk_linux.tar.gz ]]; then
 echo "Downloading Linux JVM archive..."
@@ -26,7 +26,7 @@ fi
 echo "Copying files..."
 
 cp ./target/Vifa-1.0-SNAPSHOT-shaded.jar ./target/packages/Vifa-SNAPSHOT.jar
-cp vifa22.conf ./target/packages/vifa22.conf
+cp resources/vifa.conf ./target/packages/resourcesvifa.conf
 
 cp ./package_helpers/run_vifa_linux.sh ./target/packages/run_vifa_linux.sh
 cp ./package_helpers/run_vifa_macos.sh ./target/packages/run_vifa_macos.sh
@@ -52,5 +52,5 @@ cd ./target/packages
 
 echo "Packaging for Linux..."
 
-zip Vifa-MAXI_linux_$1.zip Vifa-SNAPSHOT.jar run_vifa_linux.sh vifa22.conf ivyCommunications_linux jdk-17_linux -r -q
+zip Vifa-MAXI_linux_$1.zip Vifa-SNAPSHOT.jar run_vifa_linux.sh resources/vifa.conf ivyCommunications_linux jdk-17_linux -r -q
 

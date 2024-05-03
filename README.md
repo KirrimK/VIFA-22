@@ -1,4 +1,4 @@
-# VIFA_redux
+# VIFA-redux
 
 An educational application for visualizing aerodynamic forces on an aircraft.
 

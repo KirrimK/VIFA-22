@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=VIFA
+Exec=AppRun
+Icon=VIFA
+Type=Application
+Categories=Education
+Terminal=true
