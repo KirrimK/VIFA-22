@@ -44,6 +44,7 @@ GUI:
 - Hugo C.
 - Victor de C.
 - Charles D.
+- Roxanne G.
 
 Data backend:
 - Thierry DRUOT @ENAC

@@ -37,9 +37,9 @@ public class Configuration {
     private Color couleurFuselage = Color.GREY;
     private Color couleurMoteurs = Color.GREY;
     private Color couleurAiles = Color.WHITE;
-    private Color couleurRepèreTerrestre = Color.SANDYBROWN;
-    private Color couleurRepèreAvion = Color.WHITE;
-    private Color couleurRepèreAero = Color.BLUE;
+    private Color couleurRepereTerrestre = Color.SANDYBROWN;
+    private Color couleurRepereAvion = Color.WHITE;
+    private Color couleurRepereAero = Color.BLUE;
     private Color couleurPsiThetaPhi = Color.GRAY;
     private Color couleurAlphaBeta = Color.LIGHTBLUE;
     private Color couleurVitessesRotation = Color.DARKVIOLET;
@@ -167,17 +167,17 @@ public class Configuration {
                                 break;
                             case "couleurRepereTerrestre":
                                 if (! mots[1].equals("DEFAULT")){
-                                    couleurRepèreTerrestre = couleurFromString(mots[1]);
+                                    couleurRepereTerrestre = couleurFromString(mots[1]);
                                 }
                                 break;
                             case "couleurRepereAvion" :
                                 if (! mots[1].equals("DEFAULT")){
-                                    couleurRepèreAvion = couleurFromString(mots[1]);
+                                    couleurRepereAvion = couleurFromString(mots[1]);
                                 }
                                 break;
                             case "couleurRepereAero":
                                 if (! mots[1].equals("DEFAULT")){
-                                    couleurRepèreAero = couleurFromString(mots[1]);
+                                    couleurRepereAero = couleurFromString(mots[1]);
                                 }
                                 break;
                             case "couleurPsiThetaPhi":
@@ -240,6 +240,9 @@ public class Configuration {
                             case "inversionAero":
                                 inversionAero = Boolean.parseBoolean(mots[1]);
                                 break;
+                            case "dx", "dn", "dm", "dl":
+                            	//param joystick
+                            	break;
                             default:
                                 System.out.println("Gibberish line : \n"+ligne);
                                 break;
@@ -309,14 +312,14 @@ public class Configuration {
     public Color getCouleurAiles() {
         return couleurAiles;
     }
-    public Color getCouleurRepèreTerrestre() {
-        return couleurRepèreTerrestre;
+    public Color getCouleurRepereTerrestre() {
+        return couleurRepereTerrestre;
     }
-    public Color getCouleurRepèreAvion() {
-        return couleurRepèreAvion;
+    public Color getCouleurRepereAvion() {
+        return couleurRepereAvion;
     }
-    public Color getCouleurRepèreAero() {
-        return couleurRepèreAero;
+    public Color getCouleurRepereAero() {
+        return couleurRepereAero;
     }
     public Color getCouleurPsiThetaPhi() {
         return couleurPsiThetaPhi;

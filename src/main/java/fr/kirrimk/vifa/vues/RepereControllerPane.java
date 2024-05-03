@@ -4,7 +4,6 @@ import fr.kirrimk.vifa.Configuration;
 import fr.kirrimk.vifa.Modele;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
-import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.beans.binding.Bindings;
 import javafx.scene.control.Label;

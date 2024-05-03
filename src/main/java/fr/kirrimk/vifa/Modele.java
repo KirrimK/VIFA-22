@@ -217,7 +217,7 @@ public class Modele {
         descriptionService.setOnSucceeded(e -> {
             try {
                 ArrayList<MeshView> items = modele.DrawFFS();
-                if (items.size() > 0){
+                if (!items.isEmpty()){
                     vue.getGroupe2D().getChildren().clear();
                     vue.getGroupe2D().getChildren().addAll(items);
                     System.out.println("Formes surfaciques mises à jour avec succès.");
@@ -635,7 +635,7 @@ public class Modele {
                 System.out.println(e);
             }
             boolean fin = false;
-            while ((! fin) &((new Date()).getTime()-temps < 4000) ){
+            while ((! fin) &&((new Date()).getTime()-temps < 4000) ){
                 try {
                     Thread.sleep(50);
                 } catch (InterruptedException e) {}
@@ -644,8 +644,7 @@ public class Modele {
                 }
             }
             if (! this.receivedDrawFFS){//on a attendu 2secs, et on n'a pas la description
-                IvyException e = new IvyException("Time out de l'attente de description");
-                throw e;
+                throw new IvyException("Time out de l'attente de description");
                 //System.out.println(e);
                 //getDescription();
             }

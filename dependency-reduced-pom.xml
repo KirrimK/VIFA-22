@@ -9,6 +9,7 @@
     <plugins>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
+        <version>3.3.0</version>
         <executions>
           <execution>
             <goals>
@@ -21,6 +22,17 @@
                   <mainClass>fr.kirrimk.vifa.OtherMain</mainClass>
                 </transformer>
               </transformers>
+              <filters>
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>module-info.class</exclude>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                    <exclude>META-INF/DEPENDENCIES</exclude>
+                    <exclude>META-INF/LICENSE</exclude>
+                  </excludes>
+                </filter>
+              </filters>
             </configuration>
           </execution>
         </executions>
@@ -51,6 +63,11 @@
             </configuration>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.googlecode.mavennatives</groupId>
+        <artifactId>maven-nativedependencies-plugin</artifactId>
+        <version>0.0.7</version>
       </plugin>
     </plugins>
   </build>

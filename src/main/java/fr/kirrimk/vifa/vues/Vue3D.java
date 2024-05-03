@@ -112,9 +112,9 @@ public class Vue3D extends SubScene {
         this.repereTerrestre = repereTerrestreVide;
         repereTerrestre.getChildren().add(new AmbientLight(Color.WHITESMOKE));
         Configuration conf = Configuration.getInstance();
-        Color terrColor = conf.getCouleurRepèreTerrestre();
-        Color avColor = conf.getCouleurRepèreAvion();
-        Color aerColor = conf.getCouleurRepèreAero();
+        Color terrColor = conf.getCouleurRepereTerrestre();
+        Color avColor = conf.getCouleurRepereAvion();
+        Color aerColor = conf.getCouleurRepereAero();
 
         double repereScaling = Configuration.getInstance().getRepereScaling();
         double sensibilite = Configuration.getInstance().getReducSensibilite();
