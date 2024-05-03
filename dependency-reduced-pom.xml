@@ -18,7 +18,7 @@
               <shadedArtifactAttached>true</shadedArtifactAttached>
               <transformers>
                 <transformer>
-                  <mainClass>com.enac.vifa.vifa.OtherMain</mainClass>
+                  <mainClass>fr.kirrimk.vifa.OtherMain</mainClass>
                 </transformer>
               </transformers>
             </configuration>
@@ -41,7 +41,7 @@
           <execution>
             <id>default-cli</id>
             <configuration>
-              <mainClass>com.enac.vifa.vifa.OtherMain</mainClass>
+              <mainClass>fr.kirrimk.vifa.OtherMain</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>
