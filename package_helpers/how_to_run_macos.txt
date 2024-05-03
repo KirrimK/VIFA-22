@@ -1,0 +1,10 @@
+Vifa 2022
+
+Instructions spéciales pour MacOS:
+
+Pour lancer l'application, vous devez avoir installé python >= 3.8, ainsi que les librairies ivy-python, numpy, matplotlib via pip
+(la commande "pip install numpy matplotlib ivy-python" permet de faire cela)
+et vous devez avoir installé la JVM OpenJDK17.
+
+Une fois cela fait, lancez le script run_vifa_macos.sh depuis un terminal ouvert dans le dossier de l'archive dézippée.
+
