@@ -47,7 +47,7 @@ public class Joystick extends Thread{
 
 	
 	public Joystick(Modele m){
-		System.setProperty("net.java.games.input.librarypath", new File("jinput-2.0.7/natives").getAbsolutePath());
+		System.setProperty("net.java.games.input.librarypath", new File("lib/jinput-2.0.7/natives").getAbsolutePath());
 		this.m = m;
 		this.ce = ControllerEnvironment.getDefaultEnvironment();
 		this.controllers = availableController();
